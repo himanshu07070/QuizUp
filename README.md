@@ -18,12 +18,19 @@ question.
 `1+2,3`
 
 `8+6,14`
+
 `3+1,4`
+
 `1+4,5`
+
 `5+1,6`
+
 `2+3,5`
+
 `3+3,6`
+
 `2+4,6`
+
 `5+2,7`
 
 At the end of the quiz the program will output the total number of questions correct and how many questions there were in total. 
