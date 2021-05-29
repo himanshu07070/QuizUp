@@ -5,7 +5,7 @@ get right and how many they get incorrect. Regardless of whether the answer is c
 afterwards.
 
 The CSV file will be in a format like below, where the first column is a question and the second column in the same row is the answer to that 
-question.
+question:
 
 `5+5,10`
 
