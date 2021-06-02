@@ -9,6 +9,28 @@ import (
 	"time"
 )
 
+type problem struct {
+	q string
+	a string
+}
+
+func parseLines(lines [][]string) []problem {
+	ret := make([]problem, len(lines))
+	for i, line := range lines {
+		ret[i] = problem{
+			q: line[0],
+			a: strings.TrimSpace(line[1]),
+		}
+	}
+	return ret
+}
+
+
+
+func exit(msg string) {
+	fmt.Println(msg)
+	os.Exit(1)
+}
 func main() {
 	csvFilename := flag.String("csv", "problems.csv", "a csv file in the format of 'question,answer'")
 	timeLimit := flag.Int("limit", 30, "the time limit for the quiz in seconds")
@@ -52,23 +74,4 @@ problemloop:
 	fmt.Printf("You scored %d out of %d.\n", correct, len(problems))
 }
 
-func parseLines(lines [][]string) []problem {
-	ret := make([]problem, len(lines))
-	for i, line := range lines {
-		ret[i] = problem{
-			q: line[0],
-			a: strings.TrimSpace(line[1]),
-		}
-	}
-	return ret
-}
 
-type problem struct {
-	q string
-	a string
-}
-
-func exit(msg string) {
-	fmt.Println(msg)
-	os.Exit(1)
-}
