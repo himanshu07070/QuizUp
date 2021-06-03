@@ -32,7 +32,7 @@ func exit(msg string) {
 	os.Exit(1)
 }
 func main() {
-	csvFilename := flag.String("csv", "problems.csv", "a csv file in the format of 'question,answer'")
+	csvFilename := flag.String("csv", "problem.csv", "a csv file in the format of 'question,answer'")
 	timeLimit := flag.Int("limit", 30, "the time limit for the quiz in seconds")
 	flag.Parse()
 
